@@ -4,6 +4,8 @@ const withNextra = require('nextra')({
 })
 
 const nextConfig = {
+  //output: "export",
+  //basePath: "/pcss4vrc",
   images: {
     unoptimized: true,
   },
