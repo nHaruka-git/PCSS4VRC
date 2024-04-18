@@ -10,21 +10,22 @@ export default {
     content: 'Nextra 2 Alpha',
     key: 'Nextra 2'
   },*/
+  logo: <b>PCSS4VRC</b>,
   chat: {
-    link: 'https://discord.gg/hEM84NMkRv' // Next.js discord server,
+    link: 'https://discord.gg/hEM84NMkRv'
   },
   docsRepositoryBase:
-    'https://github.com/shuding/nextra/blob/core/examples/docs',
+    'https://github.com/nHaruka-git/PCSS4VRC',
   editLink: {
     content: 'Edit this page on GitHub'
   },
   faviconGlyph: '✦',
   head: function useHead() {
     const config = useConfig()
-    const title = `${config.title} – Nextra`
+    const title = `${config.title} – PCSS4VRC`
     const description =
-      config.frontMatter.description || 'Nextra: the Next.js site builder'
-    const image = config.frontMatter.image || 'https://nextra.site/og.jpeg'
+      config.frontMatter.description || '公式ドキュメント'
+    const image = config.frontMatter.image || 'https://pbs.twimg.com/profile_images/1775234847373758467/TGo5Cjm5_400x400.jpg'
     return (
       <>
         <title>{title}</title>

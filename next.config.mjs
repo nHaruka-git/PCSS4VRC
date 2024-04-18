@@ -15,6 +15,6 @@ export default withNextra({
   images: {
     unoptimized: true,
   },
-  basePath: "/PCSS4VRC",
-  assetPrefix:"/PCSS4VRC",
+  basePath: process.env.NODE_ENV === 'development' ? "" : "/PCSS4VRC",
+  assetPrefix: process.env.NODE_ENV === 'development' ? "" : "/PCSS4VRC",
 })
