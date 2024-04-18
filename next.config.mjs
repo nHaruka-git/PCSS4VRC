@@ -1,5 +1,6 @@
 import nextra from 'nextra'
 
+//nextraの設定
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
   themeConfig: './src/theme.config.jsx',
@@ -14,6 +15,6 @@ export default withNextra({
   images: {
     unoptimized: true,
   },
-  basePath: "/pcss4vrc",
-  assetPrefix:"/pcss4vrc",
+  basePath: "/PCSS4VRC",
+  assetPrefix:"/PCSS4VRC",
 })
