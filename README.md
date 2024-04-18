@@ -1,40 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## ドキュメント構築システム
 
-## Getting Started
+- src/pages/ 以下にmdxファイルを配置することで、自動的にドキュメントが生成されます。
+- public/ 以下に画像などのアセットを配置することで、mdxファイル内で相対パスで参照することができます。
+- ヘッダーやフッターなどの情報は、src/_meta.jsやsrc/theme.config.jsxで設定することができます。
 
-First, run the development server:
+## ドキュメントサイトのデプロイ
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- mainブランチにpushすることで、GitHub Actionsにより自動的にデプロイされます。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 開発環境構築
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. リポジトリをクローンする
+2. `bun install`を実行する
+3. `bun run dev`を実行する
+4. ローカルホストにアクセスする
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 備考
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [bun](https://bun.sh/)はnpmの早いやつです。早いぞ。
+- [nextra](https://nextra.site/)のシステムをベースにしています。
+※2系（2.13.4）がnext exportサポートしなくてキレてたので、プレリリースバージョンの3系（3.0.0-alpha.23）を使用しています。
+- 一応マークダウンの記法としては、マーメイド記法やlatexをサポートしてます。
