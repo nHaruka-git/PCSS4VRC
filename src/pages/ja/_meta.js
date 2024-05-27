@@ -1,0 +1,15 @@
+export default {
+  overview_ja:'1. 概要',
+  Preconditon_ja: '2. 前提条件',
+  detailed_function_ja:'3. 機能詳細',
+  mask_function_ja:'4. マスク機能について',
+  setup_ja:'5. 導入手順',
+  tips_ja:'6. 他プレイヤーに正常に表示させるためのTIPS',
+  caution_ja:'7. 常用する際の注意',
+  checkpoints_ja:'8. 上手くセットアップできない場合の確認項目',
+  history_ja:'9. アップデート履歴',
+  known_issue_ja:'10. 既知の不具合・注意事項',
+  term_of_user_ja:'11. 利用規約',
+  about_support_ja:'12. バグ報告・サポートについて',
+  support_guideline_ja:13. サポートガイドライン（抜粋）',
+}
