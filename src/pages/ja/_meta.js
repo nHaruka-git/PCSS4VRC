@@ -11,5 +11,5 @@ export default {
   known_issue_ja:'10. 既知の不具合・注意事項',
   term_of_user_ja:'11. 利用規約',
   about_support_ja:'12. バグ報告・サポートについて',
-  support_guideline_ja:13. サポートガイドライン（抜粋）',
+  support_guideline_ja:'13. サポートガイドライン（抜粋）',
 }
