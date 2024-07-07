@@ -1,8 +1,21 @@
 export default {
-  overview_en:'1. Overview',
-  detailed_function_en:'2. Feature Details',
-  precondition_en: '3. Prerequisites',
-  setup_en:'4. Setup steps',
-  about_support_en:'5. Bug Reporting and Support',
-  term_of_use_en:'6. Terms of Use',
+  index: 'English Manual',
+  '1. Overview': {
+    href: "en#1-overview"
+  },
+  '2. Feature Details': {
+    href: "en#2-feature-details"
+  },
+  '3. Prerequisites': {
+    href: "en#3-prerequisites"
+  },
+  '4. Setup steps': {
+    href: "en#4-setup-steps"
+  },
+  '5. Bug Reporting and Support': {
+    href: "en#5-bug-reporting-and-support"
+  },
+  '6. Terms of Use': {
+    href: "en#6-terms-of-use"
+  },
 }
