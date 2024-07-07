@@ -104,17 +104,22 @@ PCSSの実装としては、UnityアセットNext-Gen Soft-Shadows<br/>
 <details>
 <summary>以前のバージョンを削除する方法（クリックで展開）</summary>
 
-![PCSS4VRCフォルダの位置](https://via.placeholder.com/800x450?text=PCSS4VRC+Folder+Location)
+![PCSS4VRCフォルダの位置](/images/ja/delete_pscc_folder.png)
 
 上の画像のように、Unityプロジェクト内の `Assets/nHaruka/PCSS4VRC` フォルダを見つけて削除してください。
 </details>
 
 1. [オプション] NGSS(Next-Gen Soft-Shadows)をUnityAssetStoreで購入・インポートする。
+    <span><img src="/images/ja/import_ngss.png" alt="NGSSのインポート画面" width="600" height="400" /></span>
 2. **lilToonVer1.7.2**以上または**Poiyomi Pro/Toon v9.0.54**以上を導入する。
 3. 本パッケージをインポートする。
+    <span><img src="/images/ja/import_pcss.png" alt="PCSS4VRCのインポート画面" width="600" height="400" /></span>
 4. メニューバー`nHaruka`→`PCSS For VRC`を押す。
+    <span><img src="/images/ja/select_pcssforvrc.png" alt="PCSS4VRCの起動" width="600" height="400" /></span>
 5. 表示されたウインドウの`Avatar`欄にアバターをD&Dする。
+    <span><img src="/images/ja/DandD_avatar.png" alt="アバターをPCSSにセットする" width="600" height="400" /></span>
 6. 導入手順を確認の上Setupを押す
+    <img src="/images/ja/run_pcss.png" alt="PCSSの実行" width="600" height="400" />
 
 ※アバターにlilToonが同梱されていたりするとバグります。同梱されているlilToonを削除する等して、lilToonがプロジェクト内で重複しないようにしてください。
 
@@ -207,7 +212,8 @@ PCSSの実装としては、UnityアセットNext-Gen Soft-Shadows<br/>
 
 | version | 日付 | 主な変更点 |
 |------------|------|------------|
-| **v4.5.0** | **2024-06-28** | FXレイヤーをコピーして使う機能を追加。lil版でセットアップ時に透明度Boostの値を１にするように。（頬赤がバグる問題の対応） |
+| **v4.6.1** | **2024-07-07** | FXレイヤーをコピーして使う機能を修正。簡単セットアップツールを追加。 |
+| v4.5.0 | 2024-06-28 | FXレイヤーをコピーして使う機能を追加。lil版でセットアップ時に透明度Boostの値を１にするように。（頬赤がバグる問題の対応） |
 | v4.4.5 | 2024-04-18 | lil版でShadowNormalBiasが機能しない問題の修正。ライトの端の方へ行くと影が段々になる問題を修正。セットアップでマテリアルスロットが空になる問題を修正。透過シェーダーをちゃんと見えるように色々調整。ライトの合成モードを変更。干渉問題の残バグを修正。 |
 | v4.3.3 | 2024-04-14 | リアル影同士の干渉問題を解決。多数のセットアップバグを修正。lilToon版のシェーダー名を大幅変更。クラッシュバグを修正。シェーダーバリアント数を削減。 |
 | v4.2.4 | 2024-04-10 | lilToonSimplePCSS版でマテリアルエラーになる問題を修正。 |
