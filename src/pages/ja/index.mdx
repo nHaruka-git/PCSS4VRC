@@ -18,6 +18,7 @@
 &nbsp;&nbsp;&nbsp;https://assetstore.unity.com/packages/vfx/shaders/next-gen-soft-shadows-137380?locale=ja-JP<br/>
 **② SimplePCSS版**：こちらは追加アセットの購入の必要はありませんが、影の柔らかさとマスク機能のみのシンプルなバージョンです。
 
+
 ## 2. 前提条件
 
 - **Unity2022.3.6f1**<br/>
@@ -30,6 +31,7 @@
 - NGSS版を利用するには下記アセットが必要です。（なくてもSimplePCSS版は利用可能です）<br/>
 [Next-Gen Soft-Shadows]<br/>
 [https://assetstore.unity.com/packages/vfx/shaders/next-gen-soft-shadows-137380?locale=ja-JP](https://assetstore.unity.com/packages/vfx/shaders/next-gen-soft-shadows-137380?locale=ja-JP)
+
 
 ## 3. 機能詳細
 
@@ -72,6 +74,7 @@ PCSSの実装としては、UnityアセットNext-Gen Soft-Shadows<br/>
 
 - 主にアニメ調向けに影の境界をくっきりさせる`ShadowClamp`機能が追加されました。
 
+
 ## 4. マスク機能について
 
 マスク機能を使うことで、影を落としたくない箇所をマスクすることができます。
@@ -92,9 +95,20 @@ PCSSの実装としては、UnityアセットNext-Gen Soft-Shadows<br/>
 ② マスクしたいメッシュの元のテクスチャの座標を参考に、マスクしたい部分を黒く塗りつぶす。<br/>
 ③ 作成したテクスチャを`_xxxMaskTex`にセットする。
 
+
 ## 5. 導入手順
 
-0. 以前のバージョンが入っている場合は、`Assets/nHaruka/PCSS4VRC`フォルダを削除する。
+
+> ⚠️ **重要**: 以前のバージョンが入っている場合は、`Assets/nHaruka/PCSS4VRC`フォルダを削除してください。
+
+<details>
+<summary>以前のバージョンを削除する方法（クリックで展開）</summary>
+
+![PCSS4VRCフォルダの位置](https://via.placeholder.com/800x450?text=PCSS4VRC+Folder+Location)
+
+上の画像のように、Unityプロジェクト内の `Assets/nHaruka/PCSS4VRC` フォルダを見つけて削除してください。
+</details>
+
 1. [オプション] NGSS(Next-Gen Soft-Shadows)をUnityAssetStoreで購入・インポートする。
 2. **lilToonVer1.7.2**以上または**Poiyomi Pro/Toon v9.0.54**以上を導入する。
 3. 本パッケージをインポートする。
@@ -118,6 +132,7 @@ PCSSの実装としては、UnityアセットNext-Gen Soft-Shadows<br/>
 - `LocalShadowOn`をオフにすると、自分の視点では影が映らなくなります。
 - マテリアルのプロパティの`Shadow Distance`を超えた距離からは影が見えなくなります。
 
+
 ## 7. 常用する際の注意
 
 可能な限り他プレイヤーへの負荷を低減する措置を施していますが、それでも元のアバターの処理負荷に比例して処理負荷は上昇します。
@@ -129,29 +144,70 @@ PCSSの実装としては、UnityアセットNext-Gen Soft-Shadows<br/>
 一方で、影響範囲を出てしまうと影が出なくなったりしてしまうので、WorldFixを多用される方はご注意ください。<br/>
 ※どうしてもこれらの機能をOffにしたい場合は、`Assets/nHaruka/PCSS4VRC/ShadowCullingOff.preset`をライトコンポーネントに適用してください。
 
+
 ## 8. 上手くセットアップできない場合の確認項目
 
 セットアップがうまくいかない場合は、以下を確認してください：
 
-- `lilToon`のバージョンは**1.7.1**以上ですか？
-- `Poiyomi`のバージョンは**9.0.54**以上ですか？
-- バターにlilToonが同梱されていると、マテリアルエラーになることがあります。同梱されているlilToonを削除する、VCC版でバージョンダウンしてしまった際はバージョンを上げなおす等してください。(サフィー、Moeで確認済み)
-- SDKとリアル影システムは**最新ですか？**
-- アップデートの際、上書きインポートしませんでしたか？
-- `SkinedMeshRenderer`の`Lighting`の`Receive Shadow`が**オフ**になっていませんか？
-- `FXレイヤー`や`ExpressionParameterAsset`が**空の状態**でセットアップしていませんか？
-- セットアップ終了後「Finished！」と表示されましたか？ (編集済)
-- マテリアルエラーになる原因の9割は**lilToonのバージョンミスマッチ**です。アバターにlilToonが同梱されていたり、unitypackage版とVCC版の重複等により、最新版を入れたつもりでも正しく導入されていないことがあります。マテリアルのインスペクター欄のバージョンが最新か確認してください。
-- `ExpressionMenu`が機能しない場合の原因の殆どは、上書きインポートによる不完全なインポートです。Unityの上書きインポートは信頼できないので、挙動がおかしい場合は削除してからインポートしなおしてください。
-- Poiyomi版でロック時にマテリアルエラーになる場合は、PCSS関連プロパティのいくつかにAnimatedフラグを付けることで改善する場合があります。
+
+<div class="checklist-container">
+  <label class="checklist-item">
+    <input type="checkbox" /> `lilToon`のバージョンは**1.7.1**以上ですか？
+  </label>
+  <label class="checklist-item">
+    <input type="checkbox" /> `Poiyomi`のバージョンは**9.0.54**以上ですか？
+  </label>
+  <label class="checklist-item">
+    <input type="checkbox" /> <span>アバターにlilToonが同梱されていると、マテリアルエラーになることがあります。<br/>同梱されているlilToonを削除する、VCC版でバージョンダウンしてしまった際はバージョンを上げなおす等してください。<br/>(サフィー、Moeで確認済み)</span>
+  </label>
+  <label class="checklist-item">
+    <input type="checkbox" /> 
+        <span>SDKとリアル影システムは**最新ですか？**<br/>
+        リアル影システムの最新版は[booth](https://booth.pm/ja/items/4493526)からダウンロードし直してください</span>
+        <details>
+            <summary> 下のファイルほど最新です。バージョン表記を確認しながらDLしてください。</summary>
+            <div>
+            画像は**v4.5.0**が最新の場合時のものです。<br/>
+            [9-アップデート履歴](#9-アップデート履歴)と照らし合わせて最新版をダウンロードしてください。<br/>
+            ![パッケージのインポート手順](/images/ja/download_pssc_from_booth.png)
+            </div>
+        </details>
+  </label>
+  <label class="checklist-item">
+    <input type="checkbox" /> <span>アップデートの際、上書きインポートしませんでしたか？[#5-導入手順](#5-導入手順)の`以前のバージョンを削除する方法`を確認してください。</span>
+  </label>
+  <label class="checklist-item">
+    <input type="checkbox" /> <span>`SkinedMeshRenderer`の`Lighting`の`Receive Shadow`が**オフ**になっていませんか？</span>
+  </label>
+  <label class="checklist-item">
+    <input type="checkbox" /> <span>`FXレイヤー`や`ExpressionParameterAsset`が**空の状態**でセットアップしていませんか？</span>
+  </label>
+  <label class="checklist-item">
+    <input type="checkbox" /> <span>セットアップ終了後「Finished！」と表示されましたか？ (編集済)</span>
+  </label>
+  <label class="checklist-item">
+    <input type="checkbox" /> <span>マテリアルエラーになる原因の9割は**lilToonのバージョンミスマッチ**です。アバターにlilToonが同梱されていたり、unitypackage版とVCC版の重複等により、最新版を入れたつもりでも正しく導入されていないことがあります。マテリアルのインスペクター欄のバージョンが最新か確認してください。</span>
+
+  </label>
+  <label class="checklist-item">
+    <input type="checkbox" /> <span>`ExpressionMenu`が機能しない場合の原因の殆どは、上書きインポートによる不完全なインポートです。Unityの上書きインポートは信頼できないので、挙動がおかしい場合は削除してからインポートしなおしてください。</span>
+
+  </label>
+  <label class="checklist-item">
+    <input type="checkbox" /> <span>Poiyomi版でロック時にマテリアルエラーになる場合は、PCSS関連プロパティのいくつかにAnimatedフラグを付けることで改善する場合があります。</span>
+
+  </label>
+</div>
+
 
 ## 9. アップデート履歴
 
-&lt;v4未満はDiscordに移行しました&gt;	
+最新版はboothより再度ダウンロードをお願いします。<br/>
+[https://booth.pm/ja/items/4493526](https://booth.pm/ja/items/4493526)
 
 | version | 日付 | 主な変更点 |
 |------------|------|------------|
-| v4.5.0 | 2024-06-28 | FXレイヤーをコピーして使う機能を追加。lil版でセットアップ時に透明度Boostの値を１にするように。（頬赤がバグる問題の対応） |
+| **v4.5.0** | **2024-06-28** | FXレイヤーをコピーして使う機能を追加。lil版でセットアップ時に透明度Boostの値を１にするように。（頬赤がバグる問題の対応） |
 | v4.4.5 | 2024-04-18 | lil版でShadowNormalBiasが機能しない問題の修正。ライトの端の方へ行くと影が段々になる問題を修正。セットアップでマテリアルスロットが空になる問題を修正。透過シェーダーをちゃんと見えるように色々調整。ライトの合成モードを変更。干渉問題の残バグを修正。 |
 | v4.3.3 | 2024-04-14 | リアル影同士の干渉問題を解決。多数のセットアップバグを修正。lilToon版のシェーダー名を大幅変更。クラッシュバグを修正。シェーダーバリアント数を削減。 |
 | v4.2.4 | 2024-04-10 | lilToonSimplePCSS版でマテリアルエラーになる問題を修正。 |
@@ -162,6 +218,8 @@ PCSSの実装としては、UnityアセットNext-Gen Soft-Shadows<br/>
 | v4.1.0β | 2024-03-29 | CullingMatrixOverrideとBoundingSphereOverrideを設定。たぶんフォーマンスが結構上がる？SpotAngleを少し絞ることにより影の解像度が微向上。シェーダープロパティ名をわかりやすくし、インスペクターも改良。アニメーションの不具合を修正。 |
 | v4.0.2β | 2024-03-25 | (Poiyomi版)SimplePCSS版もModularShaderSystemに対応、Poiyomi9やProに対応可能に。(lilToon版含む)ShadowClamp機能を追加。各マスクの強度を調整可能に。 |
 | v4.0.1β | 2024-03-24 | (Poiyomi NGSS版のみ)ModularShaderSystemに対応、Poiyomi9やProに対応可能に。その他スムージング機能などlilToon版にあった機能を追加。 |
+
+> &lt;v4未満はDiscordに移行しました&gt;	
 
 
 ## 10. 既知の不具合・注意事項

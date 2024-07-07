@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 特定のファイルを除外
+src/pages/_meta.js
+src/pages/testpage.md

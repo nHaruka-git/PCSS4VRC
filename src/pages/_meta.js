@@ -3,4 +3,5 @@ export default {
   ja: '日本語マニュアル',
   about_creator_ja: '作者紹介',
   en: 'English Manual',
+  testpage: "testpage",
 };
